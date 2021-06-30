@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/style.css">
+	<title>ToDo List</title>
+</head>
+<body>
+
+	<main>
+		<header class="header">
+			<div class="helper helper_add">Added</div>
+			<div class="helper helper_delete">Deleted</div>
+			<div class="helper helper_edit">Edited</div>
+
+			<div class="clock">
+				<p class="clock__date">
+					<span class="day">01</span>
+					<span class="month">Jan.</span>
+					<span class="week">Mon</span>
+				</p>
+				<p class="time">00:00:00</p>
+			</div>
+
+			<div class="weather">
+				<p class="city-name"></p>
+				<p class="temperature"></p>
+				<div class="description">
+					<div class="description__inner"></div>
+					<div class="icon"></div>
+				</div>
+				<div class="wind">
+					<div class="wind__speed">00 m/s</div>
+					<div class="compass">
+						<div class="arrow">
+							<img class="arrow__inner" src="img/arrow.png">
+						</div>
+						<div class="north">N</div>
+						<div class="east">E</div>
+						<div class="south">S</div>
+						<div class="west">W</div>
+					</div>
+				</div>
+			</div>
+
+			<h1 class="header__title">ToDo List</h1>
+		</header>
+
+		<form class="main-form">
+			<input class="todo-input" type="text" placeholder="What do we have to do?">
+			<button type="submit" class="todo-button" title="Add">
+				<i class="fas fa-plus-square"></i>
+			</button>
+			<div class="select">
+				<select class="filter-todo" name="todos">
+					<option class="filter-todo__option" value="all">All</option>
+					<option class="filter-todo__option" value="completed">Completed</option>
+					<option class="filter-todo__option" value="uncompleted">Uncompleted</option>
+				</select>
+			</div>
+			<button class="delete-completed" type="submit">Delete completed</button>
+		</form>
+
+			<ul class="todo-list"></ul>
+
+		<div class="modal-overlay">
+			<div class="modal">
+				<h2 class="modal__title">Edit</h2>
+				<form class="modal__form">
+					<input class="modal__input" type="text">
+					<button class="modal__button-ok" type="submit" title="Submit"><i class="fas fa-check"></i></button>
+					<button class="modal__button-cancel" type="submit" title="Cancel"><i class="fas fa-times"></i></button>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<script src="script/app.js"></script>
+	<script src="script/clock.js"></script>
+	<script src="script/weather.js"></script>
+</body>
+</html>
