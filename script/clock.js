@@ -19,7 +19,6 @@ function displayDate() {
 	dayElement.textContent = day;
 	monthElement.textContent = monthArray[month - 1] + ",";
 	weekElement.textContent = weekArray[week];
-	console.log(month);
 }
 
 function displayTime() {
